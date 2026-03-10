@@ -1,215 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>KJKRAfT | Elevate Your Art</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>KJKRAfT | Elevate Your Art</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<style>
 
-        body {
-            background-color: #f4f6f9;
-            line-height: 1.6;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
 
-        header {
-            background: #111827;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
+body{
+background:#f4f6f9;
+line-height:1.6;
+}
 
-        .logo {
-            width: 200px;
-            height: auto;
-            margin-bottom: 10px;
-        }
+header{
+background:#111827;
+color:white;
+text-align:center;
+padding:25px;
+}
 
-        nav {
-            background: #1f2937;
-            text-align: center;
-            padding: 12px;
-        }
+.logo{
+width:200px;
+margin-bottom:10px;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+nav{
+background:#1f2937;
+text-align:center;
+padding:12px;
+}
 
-        nav a:hover {
-            color: #fbbf24;
-        }
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
+}
 
-        .hero {
-            background: linear-gradient(to right, #2563eb, #0ea5e9);
-            color: white;
-            text-align: center;
-            padding: 90px 20px;
-        }
+nav a:hover{
+color:#fbbf24;
+}
 
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 15px;
-        }
+.hero{
+background:linear-gradient(to right,#2563eb,#0ea5e9);
+color:white;
+text-align:center;
+padding:90px 20px;
+}
 
-        .hero p {
-            font-size: 18px;
-        }
+.hero h1{
+font-size:42px;
+margin-bottom:15px;
+}
 
-        .hero button {
-            margin-top: 20px;
-            padding: 12px 25px;
-            border: none;
-            background: #fbbf24;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+.hero button{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+background:#fbbf24;
+font-weight:bold;
+border-radius:5px;
+cursor:pointer;
+}
 
-        .hero button:hover {
-            background: #f59e0b;
-        }
+.hero button:hover{
+background:#f59e0b;
+}
 
-        .section {
-            padding: 70px 20px;
-            text-align: center;
-        }
+.section{
+padding:70px 20px;
+text-align:center;
+}
 
-        .section h2 {
-            margin-bottom: 20px;
-            color: #111827;
-        }
+.section h2{
+margin-bottom:20px;
+color:#111827;
+}
 
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 25px;
-            margin-top: 30px;
-        }
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+margin-top:30px;
+}
 
-        .card {
-            background: white;
-            width: 280px;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: 0.3s;
-        }
+.card{
+background:white;
+width:280px;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
+.org-container{
+margin-top:40px;
+}
 
-        footer {
-            background: #111827;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
-        }
+.member{
+text-align:center;
+max-width:220px;
+margin:auto;
+}
 
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 28px;
-            }
-        }
-    </style>
+.member img{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #2563eb;
+}
+
+.member h3{
+margin-top:10px;
+}
+
+.member a{
+text-decoration:none;
+color:#111827;
+}
+
+.member a:hover{
+color:#2563eb;
+}
+
+.member p{
+font-size:14px;
+color:#555;
+}
+
+.head{
+display:flex;
+justify-content:center;
+margin-bottom:50px;
+}
+
+.subs{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+justify-items:center;
+gap:40px;
+margin-top:30px;
+}
+
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+font-size:14px;
+}
+
+footer p{
+margin:5px 0;
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-    <img class="logo" src="https://i.ibb.co/7JqQh4Fv/KJKRAFT-CROP.png" alt="KJKRAFT-CROP" border="0">
 
-    <p><em>“Elevate Your Art, Elevate Your Game”</em></p>
+<img class="logo" src="https://i.ibb.co/7JqQh4Fv/KJKRAFT-CROP.png">
+
+<p><em>“Elevate Your Art, Elevate Your Game”</em></p>
+
 </header>
 
 <nav>
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#features">Features</a>
-    <a href="#contact">Contact</a>
+
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#features">Features</a>
+<a href="#organization">Organization</a>
+<a href="#contact">Contact</a>
+
 </nav>
 
 <section class="hero">
-    <h1>Multi-Function Drawing Table</h1>
-    <p>Innovation. Comfort. Productivity.</p>
-<a href="https://toybitzz07.github.io/SHOPEEng/" target="_blank" rel="noopener">
-    <button>Order Now</button>
+
+<h1>Multi-Function Drawing Table</h1>
+<p>Innovation. Comfort. Productivity.</p>
+
+<a href="https://toybitzz07.github.io/SHOPEEng/" target="_blank">
+<button>Order Now</button>
 </a>
+
 </section>
 
 <section id="about" class="section">
-    <h2>Why Choose KJKRAfT?</h2>
-    <p>
-        KJKRAfT delivers innovative and ergonomic workspace solutions designed 
-        to enhance creativity and efficiency. Built with high-quality materials 
-        and crafted with precision, our Multi-Function Drawing Table transforms 
-        your workspace into a professional creative environment.
-    </p>
+
+<h2>Why Choose KJKRAfT?</h2>
+
+<p>
+KJKRAfT delivers innovative and ergonomic workspace solutions designed 
+to enhance creativity and efficiency. Built with high-quality materials 
+and crafted with precision, our Multi-Function Drawing Table transforms 
+your workspace into a professional creative environment.
+</p>
+
 </section>
 
 <section id="features" class="section">
-    <h2>Product Features</h2>
 
-    <div class="cards">
-        <div class="card">
-            <h3>90° Rotation</h3>
-            <p>Flexible rotating surface for maximum workspace adaptability.</p>
-        </div>
+<h2>Product Features</h2>
 
-        <div class="card">
-            <h3>Adjustable Tilting</h3>
-            <p>30°, 45°, 60°, and 90° tilt options for drafting, sketching, and designing.</p>
-        </div>
+<div class="cards">
 
-        <div class="card">
-            <h3>Built-in Lighting</h3>
-            <p>Integrated LED lighting for precision and clarity.</p>
-        </div>
+<div class="card">
+<h3>90° Rotation</h3>
+<p>Flexible rotating surface for maximum workspace adaptability.</p>
+</div>
 
-        <div class="card">
-            <h3>Storage Compartments</h3>
-            <p>Organized drawers and compartments for tools and materials.</p>
-        </div>
+<div class="card">
+<h3>Adjustable Tilting</h3>
+<p>30°, 45°, 60°, and 90° tilt options for drafting and sketching.</p>
+</div>
 
-        <div class="card">
-            <h3>Convertible Design</h3>
-            <p>Transforms into an easel or visual board for versatile use.</p>
-        </div>
+<div class="card">
+<h3>Built-in Lighting</h3>
+<p>Integrated LED lighting for precision and clarity.</p>
+</div>
 
-        <div class="card">
-            <h3>Ergonomic Comfort</h3>
-            <p>Designed to promote proper posture and reduce strain.</p>
-        </div>
-    </div>
+<div class="card">
+<h3>Storage Compartments</h3>
+<p>Organized drawers for tools and art materials.</p>
+</div>
+
+<div class="card">
+<h3>Convertible Design</h3>
+<p>Transforms into an easel or visual board.</p>
+</div>
+
+<div class="card">
+<h3>Ergonomic Comfort</h3>
+<p>Promotes proper posture and reduces strain.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="organization" class="section">
+
+<h2>Organizational Structure</h2>
+
+<div class="org-container">
+
+<!-- HEAD -->
+
+<div class="head">
+
+<div class="member">
+<img src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t39.30808-6/615079430_880064391142599_1696687348584515787_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeFVaK6myMrOjx_X42b6_uOCSD3hB8z4BPhIPeEHzPgE-N1H885BZFAJDO5TegH-qUHhluhgroqKBtf5OkcPI8yy&_nc_ohc=fhp0brKo79QQ7kNvwHqz2J8&_nc_oc=AdmwyOWNvaAmQqQBJ-yqK4oYvXE4s7m5GGDJziy_zQyUEwnBh9YAoTsVnvV1-BDOZPzr4BrmKCZmcLpK8Z4ZR-EX&_nc_zt=23&_nc_ht=scontent.fmnl13-3.fna&_nc_gid=jb_o09s9TDFVuUCsW4GU1Q&_nc_ss=8&oh=00_Afz7D_3gcbTR3ErB4Srug-akc9uHaBLuwuCHB0DLGOKSBg&oe=69B5976B">
+<h3>
+<a href="https://www.facebook.com/kenlie.mayo" target="_blank">
+Kenlie L. Mayo
+</a>
+</h3>
+<p>General Manager / Marketing Head</p>
+</div>
+
+</div>
+
+<!-- MEMBERS -->
+
+<div class="subs">
+
+<div class="member">
+<img src="https://scontent.fmnl13-4.fna.fbcdn.net/v/t39.30808-6/559132608_2237049810053995_3838045909376989976_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeGdPo_3JfM2D4VQvsxelhmtKXGVHdhRLdQpcZUd2FEt1NTeLEdo-Gb4rBMxecQsCiUQ93fPdjyF0S1155Z4TUGG&_nc_ohc=962ju5JFzXIQ7kNvwE6uLpZ&_nc_oc=Adm-FtZYBCfZ6Ih_IOTTsd62q86L-sSfhR2UCffSAgaAPLz-gaO9K0YWO7tt1x9ap5Wmx31HUkkbDSx2RT8JcNsq&_nc_zt=23&_nc_ht=scontent.fmnl13-4.fna&_nc_gid=MAys-J3KrS3_ham_h9FB2w&_nc_ss=8&oh=00_Afy1hfR1YLXruqOJKbhD-RR-x8s1AagLLUpLaAg3AhPniw&oe=69B56B79">
+<h3>
+<a href="https://www.facebook.com/johnmichael.hidalgo.39" target="_blank">
+John Michael D. Hidalgo
+</a>
+</h3>
+<p>Social Media & Marketing</p>
+<p>Graphic Designer</p>
+<p>Multimedia</p>
+</div>
+
+<div class="member">
+<img src="https://scontent.fmnl13-4.fna.fbcdn.net/v/t39.30808-1/591404433_2238017866684408_8700065801120218164_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=110&ccb=1-7&_nc_sid=1d2534&_nc_eui2=AeGH-qsnmomkP9imkuNSFwiugyrrmx33FvmDKuubHfcW-buElNOPw3foIBhcBz4eRtJkcNcj4Zws0ohTXLrmLaEf&_nc_ohc=v_0s8NDso4sQ7kNvwEmI0T3&_nc_oc=AdnhsmGHTZ2juBJ3xpPyL7CiGwtu3y-bYRf_23bRbZAiQUx2V9B9GJKGmFJStKE5HWDYhgofvcbydDVPunWJrzOA&_nc_zt=24&_nc_ht=scontent.fmnl13-4.fna&_nc_gid=vf3EbP0EHdvinwPakf3wtQ&_nc_ss=8&oh=00_Afypv8eAFs8lX7CDKR_T-LrzYHjy0lRtPw1crJczVRy1Pg&oe=69B58C75">
+<h3>
+<a href="https://www.facebook.com/triciaangela.munar.1" target="_blank">
+Tricia Angela A. Munar
+</a>
+</h3>
+<p>Retail Manager</p>
+<p>Sales Representative</p>
+<p>Visual Merchandiser</p>
+</div>
+
+<div class="member">
+<img src="https://scontent.fcrk2-2.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=dst-png_s200x200&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_eui2=AeG0WZlw1IV_wEe49PnH3MWDWt9TLzuBU1Ba31MvO4FTUMbibXA9FrikJcDgO5A6oGI2Ic_urGlLfe9IcuVk8fEA&_nc_ohc=v3OprF4SO3wQ7kNvwFDFqNQ&_nc_oc=AdkY9AnmQnHnwln4jv_kxTSpPWv0T5kjXkFEAwJGb3ZbOiI0Fz-ZT_azztshYw4mwT2t_aBn7eiRtD2G4lB45ys6&_nc_zt=24&_nc_ht=scontent.fcrk2-2.fna&_nc_ss=8&oh=00_AfwZqxe6nsaj8Lo2sowFT7TCz8df7eSwRtB7YCljv6WkJw&oe=69D730FA">
+<h3>
+<a href="https://www.facebook.com/angeereih.pasion" target="_blank">
+Angelica Reih Q. Pasion
+</a>
+</h3>
+<p>Inventory Controller</p>
+<p>Procurement Officer</p>
+</div>
+
+<div class="member">
+<img src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t51.75761-15/499587671_18043585442562021_8568664053553991721_n.webp?stp=dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeGXsLMeYbMrcFmwfmEbhwNjBkAsdHi3D_YGQCx0eLcP9pTuYBJVW8JoTBDdbNVH9kUkm21jAXhQ0lhV-9g5vFfC&_nc_ohc=Paf6bx2NlzcQ7kNvwEhgOpb&_nc_oc=AdlqEzxvV_3DSKZLgfTFsEStTxv5PjzguK7M04OQ_7Y7AFkgYUkCd0E_mQQutJmBIzweRJOXmqx54qBobUfj1qL0&_nc_zt=23&_nc_ht=scontent.fmnl13-3.fna&_nc_gid=MtWQCwlFJj4ZoHdWsEtq1w&_nc_ss=8&oh=00_AfysErgioCpm8eyjGE5sT0WksNXgBPYf6OByqgOJtX5lfw&oe=69B5963E">
+<h3>
+<a href="https://www.facebook.com/kathleen.ducusintagalog" target="_blank">
+Kathleen D. Tagalog
+</a>
+</h3>
+<p>Administrative</p>
+<p>Finance Officer</p>
+<p>Logistics Coordinator</p>
+</div>
+
+<div class="member">
+<img src="https://scontent.fmnl13-4.fna.fbcdn.net/v/t39.30808-6/477772255_539134865853409_7732153046778893212_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=53a332&_nc_eui2=AeH7nj29fjljf_-TEgE6Bdr-RTk2p41IhzNFOTanjUiHMwwYKm7jQbq6WrikkTI4Tddw9IOELyhw2uL2IhyAThbj&_nc_ohc=TDgCI6QVEBsQ7kNvwHzMw81&_nc_oc=AdmbO8kkozAtx4x3Ul-3qX6AWj6Z9FaUH3LX_0MgXj95MtFapKvlq4hGXhCxH7f5PGWHvTVAbtsFE9IBwSx-TfkJ&_nc_zt=23&_nc_ht=scontent.fmnl13-4.fna&_nc_gid=stZiIBYrLbZGT_Hr9_p_gA&_nc_ss=8&oh=00_AfxrvR8fvSOd-_sSrHYhdQxJhgUhS26E7zCrywUOLLIeXw&oe=69B57BD0">
+<h3>
+<a href="https://www.facebook.com/randolph.vann.valdez.2025" target="_blank">
+Randolph Vann S. Valdez
+</a>
+</h3>
+<p>Production Supervisor</p>
+<p>Operation Supervisor</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <p><strong>Location:</strong> Carlatan, City of San Fernando, La Union</p>
-    <p><strong>Email:</strong> kjkraftenterprise@gmail.com</p>
-    <p><strong>Phone:</strong> +63 9XX XXX XXXX</p>
+
+<h2>Contact Us</h2>
+
+<p><strong>Location:</strong> Carlatan, City of San Fernando, La Union</p>
+<p><strong>Email:</strong> kjkraftenterprise@gmail.com</p>
+<p><strong>Phone:</strong> +63 9XX XXX XXXX</p>
+
 </section>
 
 <footer>
-    <p>© 2026 KJKRAfT Enterprise | All Rights Reserved</p>
+
+<p>© 2026 KJKRAfT Enterprise | All Rights Reserved</p>
+<p>Website Developer: <strong>John Michael Hidalgo</strong></p>
+
 </footer>
 
 </body>
-
 </html>
-
-
-
-
-
