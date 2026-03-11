@@ -19,6 +19,8 @@ background:#f4f6f9;
 line-height:1.6;
 }
 
+/* HEADER */
+
 header{
 background:#111827;
 color:white;
@@ -26,10 +28,30 @@ text-align:center;
 padding:25px;
 }
 
-.logo{
-width:200px;
-margin-bottom:10px;
+/* LOGO CROPPING CONTAINER */
+
+.logo-box{
+width:250px;
+height:120px;
+overflow:hidden;
+margin:auto;
 }
+
+/* LOGO */
+
+.logo{
+width:250px;
+margin-top:-40px;
+animation:logoFloat 4s ease-in-out infinite;
+}
+
+@keyframes logoFloat{
+0%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+100%{transform:translateY(0);}
+}
+
+/* NAVIGATION */
 
 nav{
 background:#1f2937;
@@ -42,11 +64,14 @@ color:white;
 text-decoration:none;
 margin:0 15px;
 font-weight:bold;
+transition:0.3s;
 }
 
 nav a:hover{
 color:#fbbf24;
 }
+
+/* HERO */
 
 .hero{
 background:linear-gradient(to right,#2563eb,#0ea5e9);
@@ -58,6 +83,18 @@ padding:90px 20px;
 .hero h1{
 font-size:42px;
 margin-bottom:15px;
+animation:fadeDown 1s ease;
+}
+
+@keyframes fadeDown{
+from{
+opacity:0;
+transform:translateY(-30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 .hero button{
@@ -68,21 +105,44 @@ background:#fbbf24;
 font-weight:bold;
 border-radius:5px;
 cursor:pointer;
+animation:pulse 2s infinite;
 }
 
 .hero button:hover{
 background:#f59e0b;
 }
 
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(251,191,36,0.7);}
+70%{box-shadow:0 0 0 15px rgba(251,191,36,0);}
+100%{box-shadow:0 0 0 0 rgba(251,191,36,0);}
+}
+
+/* SECTIONS */
+
 .section{
 padding:70px 20px;
 text-align:center;
+animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 .section h2{
 margin-bottom:20px;
 color:#111827;
 }
+
+/* FEATURE CARDS */
 
 .cards{
 display:flex;
@@ -98,7 +158,15 @@ width:280px;
 padding:25px;
 border-radius:10px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.4s;
 }
+
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* ORGANIZATION */
 
 .org-container{
 margin-top:40px;
@@ -116,6 +184,11 @@ height:120px;
 border-radius:50%;
 object-fit:cover;
 border:4px solid #2563eb;
+transition:0.4s;
+}
+
+.member img:hover{
+transform:scale(1.15) rotate(5deg);
 }
 
 .member h3{
@@ -150,6 +223,8 @@ gap:40px;
 margin-top:30px;
 }
 
+/* FOOTER */
+
 footer{
 background:#111827;
 color:white;
@@ -170,7 +245,9 @@ margin:5px 0;
 
 <header>
 
-<img class="logo" src="IMG_2714.png">
+<div class="logo-box">
+<img class="logo" src="https://raw.githubusercontent.com/toybitzz07/KJKRAFT/609fb899d6fc1d2d0bd7896d006fae31cd57ae96/IMG_2714.png">
+</div>
 
 <p><em>“Elevate Your Art, Elevate Your Game”</em></p>
 
@@ -359,5 +436,3 @@ Randolph Vann S. Valdez
 
 </body>
 </html>
-
-
